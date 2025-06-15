@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Sweetshop</title>
+    <style>
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            width: 100%;
+            height: 50px;
+            /* border: 1px solid red; */
+            box-sizing: border-box;
+            float: left;
+            padding: 10px;
+        }
+        #brand{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            float: left;
+        }
+        #tag_line{
+            margin-top: 9px;
+            padding: 0;
+            float: right;
+            font-family: century gothic;
+        }
+        nav{
+            height: 100px;
+            width: 100%;
+            background-color: blue;
+            float: left;
+            box-sizing: border-box;
+            padding: 30px;
+        }
+        #search{
+            width: 400px;
+            height: 40px;
+            float: left;
+            box-sizing: border-box;
+            border: none;
+            font-size: 16px;
+            padding: 5px;
+            /* outline: none; */
+        }
+        #search_btn{
+            width: 100px;
+            height: 40px;
+            float: left;
+            box-sizing: border-box;
+            border: none;
+            margin-left: 3px;
+            font-size: 16px;
+        }
+        #menu_table{
+            width: 600px;
+            height: 40px;
+            float: right;
+            box-sizing: border-box;
+        }
+        #menu_item{
+            background-color: white;
+            text-align: center;
+            width: 20%;
+            /* text-transform: uppercase; */
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            font-family: sans-serif;
+            
+        }
+        section{
+            width: 100%;
+            height: 800px;
+            box-sizing: border-box;
+            /* border: 2px solid black; */
+            float: left;
+        }
+        #venue{
+            width: 40%;
+            float: left;
+            padding: 30px;
+        }
+        #order{
+            text-align: right;
+            width: 40%;
+            float: right;
+            padding: 30px;
+            margin-right: 0px;
+        }
+        #h1{
+            width: 100%;
+            font-size: 30px;
+            font-family: sans-serif;
+            float: left;
+            text-align: center;
+            text-transform: capitalize;
+        }
+        #sweet1{
+            height: 250px;
+            width: 250px;
+            border: 2px solid gray;
+            float: left;
+            box-sizing: border-box;
+            margin-left: 30px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            align-items: center;
+            transition: all 0.3s ease-in-out ;
+        }
+        #sweet1:hover{
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        #sweet{
+            height: 250px;
+            width: 250px;
+            border: 2px solid gray;
+            float: left;
+            box-sizing: border-box;
+            margin-left: 30px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-right: 25px;
+            transition: all 0.3s ease-in-out ;
+        }
+        #sweet:hover{
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        #sweet2{
+            height: 250px;
+            width: 250px;
+            border: 2px solid gray;
+            float: left;
+            box-sizing: border-box;
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-right: 30px;
+            float: right;
+            transition: all 0.3s ease-in-out;
+        }
+
+        #sweet2:hover{
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        #img1{
+            align-items: center;
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            box-sizing: border-box;
+            border-bottom: 2px groove gray;
+        }
+        .btn{
+            width: 100%;
+            height: 40px;
+            background-color: rgb(247, 247, 251);
+            color: rgb(14, 14, 14);
+            border-radius: 5px;
+            font-size: 20px;
+            font-family: sans-serif;
+            cursor: pointer;
+            float: right;
+        }
+        .btn:hover{
+            background-color: blue;
+            color: white;
+        }
+        footer{
+            width: 100%;
+            height: 350px;
+            box-sizing: border-box;
+            border: 2px solid black;
+            background-color: black;
+            float: left;
+        }
+        #leftf{
+            width: 25%;
+            height: 250px;
+            box-sizing: border-box;
+            float: left;
+            /* border: 2px solid red; */
+            margin: 30px;
+        }
+        #rightf{
+            width: 40%;
+            height: 250px;
+            box-sizing: border-box;
+            float: right;
+            /* border: 2px solid red; */
+            margin: 30px;
+        }
+        #h1t
+        {
+            font-size: 25px;
+            font-family: sans-serif;
+            color: white;
+            text-transform: capitalize;
+            text-align: center;
+        }
+        .ads{
+            
+            font-size: 20px;
+            font-family: sans-serif;
+            color: white;
+            text-transform: capitalize;
+            line-height: 40px;
+            padding-left: 20px;
+        }
+        .sym{
+            font-size: 30px;
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+           text-align: center;
+        }
+        .sym:hover{
+            color: blue;
+            transition: all 0.3s ease-in-out;
+        }
+        #h3t{
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-family: sans-serif;
+            font-size: 20px;
+            float: left;
+            margin: 0;padding: 0;
+
+        }
+    </style>
+</head>
+<body>
+   <header>
+    <h1 id="brand">Sweetshop.com</h1>
+    <p id="tag_line">The world's largest Sweet & bakeries shop</p>
+   </header> 
+   <nav>
+    <form action="">
+        <input type="search" name="search" placeholder="search your sweets hear" id="search">
+        <input type="submit" id="search_btn" value="Search">
+    </form>
+    <table border="1" id="menu_table">
+        <tr>
+            <td id="menu_item"><a href="index.html">Home</a></td>
+            <td id="menu_item"><a href="#h1">Sweet</a></td>
+            <td id="menu_item"><a href="index.html#Popular-sweets-box">Bakeries</a></td>
+            <td id="menu_item"><a href="#abt-us">About Us</a></td>
+            <td id="menu_item"><a href="#leftf">Contact us</a></td>
+        </tr>
+    </table>
+   </nav>
+   
+   <section>
+    <address id="venue">Venue:Patel nagar Maharastra</address>
+    <address id="order">Order Online: +91 8177921044</address>
+
+
+    <div id="moresweet">
+        <h1 id="h1">More sweets</h1>
+        <div id="sweet1">
+            <img src="./image/s.jpeg" alt=""id="img1">
+            <a href="index.html#Order Online"><button class="btn">order now</button></a></div>
+        <div id="sweet">
+            <img src="./image/t.jpeg" alt="" id="img1">
+            <a href="index.html#Order Online"><button class="btn">order now</button></a></div>
+            <!-- <button class="btn">order now</button> -->
+        </div>
+        <div id="sweet">
+            <img src="./image/u.jpeg" alt="" id="img1">
+            <a href="index.html#Order Online"><button class="btn">order now</button></a></div>
+            <!-- <button class="btn">order now</button> -->
+        </div>
+        <div id="sweet">
+            <img src="./image/g.jpeg" alt=""id="img1">
+            <a href="index.html#Order Online"><button class="btn">order now</button></a></div>
+            <!-- <button class="btn">order now</button> -->
+        </div>
+        <div id="sweet2">
+            <img src="./image/w.jpeg" alt="" id="img1">
+            <a href="index.html#Order Online"><button class="btn">order now</button></a></div>
+            <!-- <button class="btn">order now</button> -->
+        </div>
+        <div id="sweet1">
+            <img src="./image/x.jpeg" alt="" id="img1">
+            <a href="index.html#Order Online"><button class="btn">order now</button></a></div>
+            <!-- <button class="btn">order now</button> -->
+        </div>
+        <div id="sweet">
+            <img src="./image/y.jpeg" alt="" id="img1">
+            <a href="index.html#Order Online"><button class="btn">order now</button></a></div>
+            <!-- <button class="btn">order now</button> -->
+        </div>
+        <div id="sweet">
+            <img src="./image/b.jpeg" alt="" id="img1">
+            <a href="index.html#Order Online"><button class="btn">order now</button></a></div>
+            <!-- <button class="btn">order now</button> -->
+        </div>
+        <div id="sweet"><img src="./image/d.jpeg" alt=""id="img1">
+            <a href="index.html#Order Online"><button class="btn">order now</button></a></div>
+            <!-- <button class="btn">order now</button> -->
+        </div>
+        <div id="sweet2"><img src="./image/m.jpg" alt="" id="img1">
+            <a href="index.html#Order Online"><button class="btn">order now</button></a></div>
+            <!-- <button class="btn">order now</button> -->
+        </div>
+    </div>
+   </section>
+   <footer>
+    <div id="leftf">
+
+        <h1 id="h1t">Contact us</h1>
+        <address class="ads">website: sweetshop.com</address>
+        <adress class="ads">phone no:+91 1177921044</adress><br>
+        <adress class="ads">Email : sweets@gmail.com</adress><br>
+        <adress class="ads">Address: varud ves jintur Maharastra</adress>
+    </div>
+    <div id="rightf">
+        <h1 id="h1t">Follow us </h1>
+        <center>
+            <a href="https://www.facebook.com/" title="Facebbok"><i class="bi bi-facebook sym"></i></a>
+            <a href="https://www.instagram.com/" title="instagram"><i class="bi bi-instagram sym"></i></a>
+            <a href="https://twitter.com/" title="twitter"><i class="bi bi-twitter sym"></i></a>
+            <a href="https://www.youtube.com/" title="youtube"><i class="bi bi-youtube sym"></i></a>
+            <a href="https://www.linkedin.com/" title="linkedin"><i class="bi bi-linkedin sym"></i></a>
+                    <p class="ads">Follow us on social media for the latest updates and offers!</p>
+        </center>
+    </div>
+    <div>
+        <h3 id="h3t">Developed by: Vaishnavi Shinde </h3>
+    </div>
+
+   </footer>
+</body>
+</html>

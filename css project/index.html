@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Sweetshop</title>
+    <style>
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            width: 100%;
+            height: 50px;
+            /* border: 1px solid red; */
+            box-sizing: border-box;
+            float: left;
+            padding: 10px;
+        }
+        #brand{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            float: left;
+        }
+        #tag_line{
+            margin-top: 9px;
+            padding: 0;
+            float: right;
+            font-family: century gothic;
+        }
+        nav{
+            height: 100px;
+            width: 100%;
+            background-color: blue;
+            float: left;
+            box-sizing: border-box;
+            padding: 30px;
+        }
+        #search{
+            width: 400px;
+            height: 40px;
+            float: left;
+            box-sizing: border-box;
+            border: none;
+            font-size: 16px;
+            padding: 5px;
+            /* outline: none; */
+        }
+        #search_btn{
+            width: 100px;
+            height: 40px;
+            float: left;
+            box-sizing: border-box;
+            border: none;
+            margin-left: 3px;
+            font-size: 16px;
+        }
+        #menu_table{
+            width: 600px;
+            height: 40px;
+            float: right;
+            box-sizing: border-box;
+        }
+        #menu_item{
+            background-color: white;
+            text-align: center;
+            width: 20%;
+            /* text-transform: uppercase; */
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            font-family: sans-serif;
+            
+        }
+        section{
+            width: 100%;
+            height: 2100px;
+            box-sizing: border-box;
+            /* border: 2px solid black; */
+            float: left;
+        }
+        #venue{
+            width: 40%;
+            float: left;
+            padding: 30px;
+        }
+        #order{
+            text-align: right;
+            width: 40%;
+            float: right;
+            padding: 30px;
+            margin-right: 0px;
+        }
+        
+        #Popular-sweets-title{
+            color: white;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            margin: 10px;padding: 10px;
+        }
+        #img{
+            border: 5px groove white;
+            height: 195px;
+            width: 200px;
+            padding: 9px;
+            margin: 9px;
+            transition: all 0.3s ease-in-out;
+        }
+        #rate-list_box{
+            width: 550px;
+            height: 560px;
+            float: right;
+            box-sizing: border-box;
+            margin: 25px;
+            padding: 0;
+        }
+        #sweets-name{
+            height: 40px;
+            width: 70%;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            text-align: center;
+            font-size: 25px;
+        }
+        #sweets_price{
+            height: 40px;
+            width: 30%;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            text-align: center;
+            font-size: 25px;
+        }
+        #Popular-sweets-box{
+            float: left;
+            height: 560px;
+            width: 750px;
+            background-color: black;
+            margin: 30px;
+            padding: 0;
+        }
+        #item-rs{
+            text-align: center;
+            list-style: none;
+            font-family: sans-serif;
+            font-size: 20px;
+            background-color: blue;
+            line-height: 40px;
+            text-transform: capitalize;
+        }
+        hr{
+            width: 90%;
+        }
+        fieldset{
+            width: 720px;
+            height: 670px;
+            float: left;
+            margin:0 30px;
+            border-color: lightgray;
+        }
+        legend{
+            font-size: 25px;
+        }
+        #orderr{
+            float:right;
+            font-family: sans-serif;
+            font-size: 25px;
+            border: 2px solid lab(53.59% 0 -0.01);
+            border-radius: 5px;
+            padding: 5px 20px;
+            cursor: pointer;
+        }
+        #orderr:hover{
+            background-color: blue;
+            color: white;
+        }
+
+       #Order_Online{
+        font-size: 20px;
+        font-family: century gothic;
+       }
+       input[type="text"],
+       input[type="number"],
+         select,    
+        textarea{
+            width: 100%;
+            height: 30px;
+            margin: 10px 0;
+            padding: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            font-family: sans-serif;
+            border: 1px solid gray;
+            border-radius: 5px;
+            outline: none;
+        }
+        textarea{
+            height: 100px;
+        }
+        #abt-us{
+            height: 670px;
+            width: 530px;
+            float: right;
+            border: 2px solid lab(53.59% 0 -0.01);
+            padding: 5px;
+            margin: 12px 30px 30px 30px;
+        }
+        #paragraph{
+            text-align: justify;
+            padding: 20px;
+            line-height: 20px;
+            font-size: 16px;
+            font-family: sans-serif;
+            
+        }
+        
+        #h1{
+            width: 100%;
+            font-size: 30px;
+            font-family: sans-serif;
+            float: left;
+            text-align: center;
+            text-transform: capitalize;
+            margin: 30px;
+        }
+        #sweet1{
+            height: 250px;
+            width: 250px;
+            border: 2px solid gray;
+            float: left;
+            box-sizing: border-box;
+            margin-left: 30px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            align-items: center;
+            transition: all 0.3s ease-in-out ;
+        }
+        #sweet1:hover{
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        #sweet{
+            height: 250px;
+            width: 250px;
+            border: 2px solid gray;
+            float: left;
+            box-sizing: border-box;
+            margin-left: 30px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-right: 25px;
+            transition: all 0.3s ease-in-out ;
+        }
+        #sweet:hover{
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        #sweet2{
+            height: 250px;
+            width: 250px;
+            border: 2px solid gray;
+            float: left;
+            box-sizing: border-box;
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-right: 30px;
+            float: right;
+            transition: all 0.3s ease-in-out;
+        }
+
+        #sweet2:hover{
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        #img1{
+            align-items: center;
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            box-sizing: border-box;
+            border-bottom: 2px groove gray;
+        }
+        .btn{
+            width: 100%;
+            height: 40px;
+            background-color: rgb(247, 247, 251);
+            color: rgb(14, 14, 14);
+            border-radius: 5px;
+            font-size: 20px;
+            font-family: sans-serif;
+            cursor: pointer;
+            float: right;
+        }
+        .btn:hover{
+            background-color: blue;
+            color: white;
+        }
+        footer{
+            width: 100%;
+            height: 350px;
+            box-sizing: border-box;
+            border: 2px solid black;
+            background-color: black;
+            float: left;
+        }
+        #leftf{
+            width: 25%;
+            height: 250px;
+            box-sizing: border-box;
+            float: left;
+            /* border: 2px solid red; */
+            margin: 30px;
+        }
+        #rightf{
+            width: 40%;
+            height: 250px;
+            box-sizing: border-box;
+            float: right;
+            /* border: 2px solid red; */
+            margin: 30px;
+        }
+        #h1t
+        {
+            font-size: 25px;
+            font-family: sans-serif;
+            color: white;
+            text-transform: capitalize;
+            text-align: center;
+        }
+        .ads{
+            
+            font-size: 20px;
+            font-family: sans-serif;
+            color: white;
+            text-transform: capitalize;
+            line-height: 40px;
+            padding-left: 20px;
+        }
+        .sym{
+            font-size: 30px;
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+           text-align: center;
+        }
+        .sym:hover{
+            color: blue;
+            transition: all 0.3s ease-in-out;
+        }
+        #h3t{
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-family: sans-serif;
+            font-size: 20px;
+            float: left;
+            margin: 0;padding: 0;
+
+        }
+        
+    </style>
+</head>
+<body>
+   <header>
+    <h1 id="brand">Sweetshop.com</h1>
+    <p id="tag_line">The world's largest Sweet & bakeries shop</p>
+   </header> 
+   <nav>
+    <form action="">
+        <input type="search" name="search" placeholder="search your sweets hear" id="search">
+        <input type="submit" id="search_btn" value="Search">
+    </form>
+    <table border="1" id="menu_table">
+        <tr>
+            <td id="menu_item"><a href="index.html">Home</a></td>
+            <td id="menu_item"><a href="sweet.html">Sweet</a></td>
+            <td id="menu_item"><a href="#Popular-sweets-box">Bakeries</a></td>
+            <td id="menu_item"><a href="#abt-us">About Us</a></td>
+            <td id="menu_item"><a href="#leftf">Contact us</a></td>
+        </tr>
+    </table>
+   </nav>
+   
+   <section>
+    <address id="venue">Venue:Patel nagar Maharastra</address>
+    <address id="order">Order_Online: +91 8177921044</address>
+
+
+    <div id="Popular-sweets-box">
+        <center>
+            <h1 id="Popular-sweets-title">Our popular sweets</h1>
+        </center>
+        <img src="./image/g.jpeg" alt="" id="img">
+        <img src="./image/b.jpeg" alt="" id="img">
+        <img src="./image/d.jpeg" alt="" id="img">
+        <img src="./image/e.jpeg" alt="" id="img">
+        <img src="./image/f.jpeg" alt="" id="img">
+        <img src="./image/i.jpeg" alt="" id="img">
+
+    </div>
+    <table id="rate-list_box" border="0">
+        <tr>
+            <td id="sweets-name">Sweets Name</td>
+            <td id="sweets_price">Price</td>   
+        </tr>
+        <tr>
+            <td id="item-rs">
+                <li>Kaju Katli</li><hr>
+                <li>gulab jamun</li><hr>
+                <li>ladoo</li><hr>
+                <li>rasmali</li><hr>
+                <li>rasogolla</li><hr>
+                <li>barfi</li><hr>
+                <li>paan</li><hr>
+                <li>jalebi</li><hr>   
+            </td>
+            <td id="item-rs">
+                <li> 345 &#8377</li><hr>
+                <li> 150 &#8377</li><hr>
+                <li> 150 &#8377</li><hr>
+                <li> 250 &#8377</li><hr>
+                <li> 170 &#8377</li><hr>
+                <li> 270 &#8377</li><hr>
+                <li> 160 &#8377</li><hr>
+                <li> 150 &#8377</li><hr>   
+            </td>
+        </tr>
+    </table>
+<form id="Order_Online">
+    <fieldset>
+        <legend>Order Online</legend>
+        <label for="name" value="name">Buyer Name :</label>
+        <input type="text" id="name" placeholder="Enter name"  autofocus><br><br>
+        <label for="phoneno" value="phoneno"> Phone no :</label>
+        <input type="number" id="phoneno" placeholder="Phone number"><br><br>
+        <label for="sweets" value="on">Choose Sweets :</label>
+        <select>
+            <option value="Kaju Katli">Kaju Katli</option>
+            <option value="gulab jamun">gulab jamun</option>
+            <option value="ladoo">ladoo</option>
+            <option value="rasmali" selected>rasmali</option>
+            <option value="rasogolla">rasogolla</option>
+            <option value="barfi">barfi</option>
+            <OPtion value="paan">Panna</OPtion>
+            <option value="jalebi">jalebi</option>
+        </select><br><br>
+        <label for="no" value="quality">Select quantity :</label>
+        <input type="text" id="no" placeholder="1kg"><br><br>
+        <label for="address">Address</label>
+        <textarea name="" id="address" placeholder="Enter address"></textarea><br><br>
+
+        <button type="submit" id="orderr" name="order">Order Now</button>
+    </fieldset>
+</form>
+
+    <div id="abt-us">
+        <center>
+            <img src="./image/images.png" alt="" height="50px"><h2  style="margin: 0;padding: 0;">About us</h2><hr>
+        <p id="paragraph">Welcome to vaishnavi shinde, your ultimate destination for delightful sweets and irresistible treats crafted with passion and precision. At Sugar Bliss, we believe that every bite should spark joy, evoke fond memories, and create new moments of happiness. Our sweetshop is a celebration of tradition combined with contemporary flair, where classic recipes meet innovative flavors and artistic presentation.
+        Founded with a love for quality ingredients and a dedication to craftsmanship, Sugar Bliss sources only the finest chocolates, fresh fruits, nuts, and natural flavorings to create a diverse range of confections. From decadent truffles and handcrafted caramels to colorful macarons and luscious cakes, each product is thoughtfully prepared by our expert artisans to ensure exceptional taste and visual appeal.
+        We are committed not only to sweetness but also to sustainability and community. Our packaging is eco-friendly, and we partner with local farmers and suppliers to support ethical sourcing. Whether you’re celebrating a special occasion or simply indulging your sweet tooth, Sugar Bliss offers an inviting and vibrant atmosphere where everyone feels welcome.
+        Join us in our journey to spread sweetness and smiles, one exquisite dessert at a time. At Sugar Bliss, we don’t just make sweets—we create moments of pure bliss that linger long after the last bite.</p></center>
+    </div>
+
+
+    <div id="moresweet">
+        <h1 id="h1">More sweets</h1>
+        <div id="sweet1">
+            <img src="./image/s.jpeg" alt=""id="img1">
+            <a href="#Order_Online"><button class="btn">order now</button></a></div>
+            <!-- <button class="btn">order now</button></div> -->
+        <div id="sweet">
+            <img src="./image/t.jpeg" alt="" id="img1">
+            <a href="#Order_Online"><button class="btn">order now</button></a></div>
+            <!-- <button class="btn">order now</button> -->
+        </div>
+        <div id="sweet">
+            <img src="./image/u.jpeg" alt="" id="img1">
+            <a href="#Order_Online"><button class="btn">order now</button></a></div>
+            <!-- <button class="btn">order now</button> -->
+        </div>
+        <div id="sweet">
+            <img src="./image/g.jpeg" alt=""id="img1">
+            <a href="#Order_Online"><button class="btn">order now</button></a></div>
+            <!-- <button class="btn">order now</button> -->
+        </div>
+        <div id="sweet2">
+            <img src="./image/w.jpeg" alt="" id="img1">
+            <!-- <button class="btn">order now</button> -->
+            <a href="#Order_Online"><button class="btn">order now</button></a></div>
+        </div>
+        <div id="sweet1">
+            <img src="./image/x.jpeg" alt="" id="img1">
+            <a href="#Order_Online"><button class="btn">order now</button></a></div>
+            <!-- <button class="btn">order now</button> -->
+        </div>
+        <div id="sweet">
+            <img src="./image/y.jpeg" alt="" id="img1">
+            <a href="#Order_Online"><button class="btn">order now</button></a></div>
+            <!-- <button class="btn">order now</button> -->
+        </div>
+        <div id="sweet">
+            <img src="./image/b.jpeg" alt="" id="img1">
+            <a href="index.html#Order_Online"><button class="btn">order now</button></a></div>
+            <!-- <button class="btn">order now</button> -->
+        </div>
+        <div id="sweet"><img src="./image/d.jpeg" alt=""id="img1">
+            <a href="#Order_Online"><button class="btn">order now</button></a></div>
+            <!-- <button class="btn">order now</button> -->
+        </div>
+        <div id="sweet2"><img src="./image/m.jpg" alt="" id="img1">
+            <a href="#Order_Online"><button class="btn">order now</button></a></div>
+            <!-- <button class="btn">order now</button> -->
+        </div>
+    </div>
+   </section>
+   <footer>
+    <div id="leftf">
+
+        <h1 id="h1t">Contact us</h1>
+        <address class="ads">website: sweetshop.com</address>
+        <adress class="ads">phone no:+91 8177921044</adress><br>
+        <adress class="ads">Email : sweets@gmail.com</adress><br>
+        <adress class="ads">Address: varud ves jintur Maharastra</adress>
+    </div>
+    <div id="rightf">
+        <h1 id="h1t">Follow us </h1>
+        <center>
+            <a href="https://www.facebook.com/" title="Facebbok"><i class="bi bi-facebook sym"></i></a>
+            <a href="https://www.instagram.com/" title="instagram"><i class="bi bi-instagram sym"></i></a>
+            <a href="https://twitter.com/" title="twitter"><i class="bi bi-twitter sym"></i></a>
+            <a href="https://www.youtube.com/" title="youtube"><i class="bi bi-youtube sym"></i></a>
+            <a href="https://www.linkedin.com/" title="linkedin"><i class="bi bi-linkedin sym"></i></a>
+                    <p class="ads">Follow us on social media for the latest updates and offers!</p>
+        </center>
+    </div>
+    <div>
+        <h3 id="h3t">Developed by: Vaishnavi Shinde </h3>
+    </div>
+
+   </footer>
+</body>
+</html>
